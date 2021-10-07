@@ -7,7 +7,7 @@ public class Triangulo {
         if (A>=B+C || B>=A+C || C>=A+B)
             return TipoTriangulo.INVALIDO;
         if (A==B && B==C)
-            return TipoTriangulo.EQUILATERO;
+            return TipoTriangulo.ESCALENO;
         if (A==B || B==C || A==C)
             return TipoTriangulo.ISOSCELES;
         return TipoTriangulo.ESCALENO;
