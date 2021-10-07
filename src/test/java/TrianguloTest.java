@@ -23,6 +23,6 @@ public class TrianguloTest {
 
     @Test
     public void testInvalido(){
-        assertEquals(TipoTriangulo.INVALIDO,Triangulo.classificaTriangulo(-1,2,3));
+        assertEquals(TipoTriangulo.LADOINVALIDO,Triangulo.classificaTriangulo(-1,2,3));
     }
 }

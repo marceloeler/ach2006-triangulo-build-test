@@ -4,5 +4,6 @@ public enum TipoTriangulo {
     EQUILATERO,
     ESCALENO,
     ISOSCELES,
-    INVALIDO;
+    LADOINVALIDO,
+    NAOTRIANGULO;
 }
