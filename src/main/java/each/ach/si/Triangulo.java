@@ -1,10 +1,21 @@
 package each.ach.si;
 
 public class Triangulo {
-    public static TipoTriangulo classificaTriangulo(int A, int B, int C){
+
+    public static boolean ladoInvalido(int A, int B, int C){
         if (A<=0 || B<=0 || C<0)
-            return TipoTriangulo.INVALIDO;
-        if (A>=B+C || B>=A+C || C>=A+B)
+            return true;
+        return false;
+    }
+
+    public static boolean formaTriangulo(int A, int B, int C){
+        if (A<B+C || B<A+C || C<A+B)
+            return true;
+        return false;
+    }
+
+    public static TipoTriangulo classificaTriangulo(int A, int B, int C){
+        if (!formaTriangulo(A,B,C) || ladoInvalido(A,B,C))
             return TipoTriangulo.INVALIDO;
         if (A==B && B==C)
             return TipoTriangulo.ESCALENO;
