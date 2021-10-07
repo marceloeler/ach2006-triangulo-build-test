@@ -20,7 +20,7 @@ public class Triangulo {
         if (temLadoInvalido(A,B,C))
             return TipoTriangulo.LADOINVALIDO;
         if (A==B && B==C)
-            return TipoTriangulo.ESCALENO;
+            return TipoTriangulo.EQUILATERO;
         if (A==B || B==C || A==C)
             return TipoTriangulo.ISOSCELES;
         return TipoTriangulo.ESCALENO;
