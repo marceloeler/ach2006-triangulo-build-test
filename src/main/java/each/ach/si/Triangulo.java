@@ -15,10 +15,12 @@ public class Triangulo {
     }
 
     public static TipoTriangulo classificaTriangulo(int A, int B, int C){
-        if (!formaTriangulo(A,B,C) || temLadoInvalido(A,B,C))
-            return TipoTriangulo.INVALIDO;
+        if (!formaTriangulo(A,B,C))
+            return TipoTriangulo.NAOTRIANGULO;
+        if (temLadoInvalido(A,B,C))
+            return TipoTriangulo.LADOINVALIDO;
         if (A==B && B==C)
-            return TipoTriangulo.ESCALENO;
+            return TipoTriangulo.EQUILATERO;
         if (A==B || B==C || A==C)
             return TipoTriangulo.ISOSCELES;
         return TipoTriangulo.ESCALENO;
